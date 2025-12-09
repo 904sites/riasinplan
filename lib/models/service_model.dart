@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-// Class kecil untuk item tambahan (contoh: Bulu Mata + 12.000)
 class ServiceExtra {
   final String name;
   final double price;

@@ -4,7 +4,7 @@ enum PaymentMethod { transfer, cash, qris }
 
 enum PaymentStatus { unpaid, downPayment, paid }
 
-enum BookingStatus { scheduled, completed, canceled } // Status Pengerjaan
+enum BookingStatus { scheduled, completed, canceled }
 
 class BookingModel {
   final String id;

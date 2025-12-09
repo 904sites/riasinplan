@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // --- PALET WARNA BARU (Cherry) ---
   static const Color ruby = Color(0xFF8C1312);
   static const Color poppyPink = Color(0xFFFF96B4);
   static const Color forest = Color(0xFF084509);
   static const Color brightBlue = Color(0xFF4FB6E5);
   static const Color sunshine = Color(0xFFFFDF59);
-
-  // --- WARNA BARU REQUEST (Background) ---
-  static const Color dustyWhite = Color(0xFFF2EEE8); // <--- INI WARNA BARU
+  static const Color dustyWhite = Color(0xFFF2EEE8);
 
   // MAPPING WARNA
   static const Color dustyOrchid = ruby;
@@ -28,7 +25,6 @@ class AppTheme {
       // Warna Utama
       primaryColor: AppColors.ruby,
 
-      // GANTI BACKGROUND BAWAAN KE DUSTY WHITE
       scaffoldBackgroundColor: AppColors.dustyWhite,
 
       // Skema Warna
@@ -37,15 +33,14 @@ class AppTheme {
         primary: AppColors.ruby,
         secondary: AppColors.poppyPink,
         tertiary: AppColors.sunshine,
-        surface: AppColors.dustyWhite, // Surface juga Dusty White
+        surface: AppColors.dustyWhite,
         error: const Color(0xFFB00020),
       ),
 
-      // Tema AppBar (Ubah jadi Dusty White agar menyatu)
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.dustyWhite,
         elevation: 0,
-        scrolledUnderElevation: 0, // Hilangkan efek shadow saat scroll
+        scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: AppColors.ruby),
         titleTextStyle: TextStyle(
           color: AppColors.ruby,
@@ -55,7 +50,6 @@ class AppTheme {
         ),
       ),
 
-      // ... (Sisa tema tombol dll tetap sama) ...
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.ruby,
         foregroundColor: Colors.white,
@@ -81,7 +75,7 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Colors.white, // Input tetap putih agar kontras
+        fillColor: Colors.white,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(color: AppColors.poppyPink),

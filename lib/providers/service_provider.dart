@@ -21,7 +21,7 @@ class ServiceProvider with ChangeNotifier {
         .toList();
   }
 
-  // --- SEARCH LOGIC (YANG TADINYA HILANG) ---
+  // --- SEARCH LOGIC ---
   void setSearchQuery(String query) {
     _searchQuery = query;
     notifyListeners();
@@ -31,8 +31,8 @@ class ServiceProvider with ChangeNotifier {
   Future<void> setUserId(String userId) async {
     if (_currentUserId != userId) {
       _currentUserId = userId;
-      _services = []; // Kosongkan dulu saat ganti akun
-      _searchQuery = ""; // Reset search
+      _services = [];
+      _searchQuery = "";
       notifyListeners();
       await loadServices();
     }
@@ -82,7 +82,7 @@ class ServiceProvider with ChangeNotifier {
     if (_currentUserId.isEmpty) return;
 
     final prefs = await SharedPreferences.getInstance();
-    final String key = 'services_$_currentUserId'; // Key Unik
+    final String key = 'services_$_currentUserId';
 
     final String data = json.encode(_services.map((e) => e.toMap()).toList());
     await prefs.setString(key, data);

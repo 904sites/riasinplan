@@ -75,7 +75,7 @@ class BookingProvider with ChangeNotifier {
 
   // --- INCOME & TRANSACTION GETTERS ---
 
-  // 1. HARIAN (Fitur Baru)
+  // 1. HARIAN
   List<BookingModel> get dailyTransactions {
     final now = DateTime.now();
     return _bookings.where((b) {
@@ -214,7 +214,7 @@ class BookingProvider with ChangeNotifier {
     return true;
   }
 
-  // --- CHART DATA GENERATOR (Update: Tambah Harian) ---
+  // --- CHART DATA GENERATOR ---
   Map<String, double> getChartData(String filterType) {
     Map<String, double> data = {};
     final now = DateTime.now();

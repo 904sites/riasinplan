@@ -29,7 +29,7 @@ class AuthProvider with ChangeNotifier {
     }
   }
 
-  // UPDATE USER (Fitur Baru)
+  // UPDATE USER
   Future<void> updateUser(UserModel updatedUser) async {
     final prefs = await SharedPreferences.getInstance();
 

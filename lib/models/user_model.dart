@@ -6,7 +6,7 @@ class UserModel {
   final String email;
   final String password;
   final DateTime joinDate;
-  final String? profileImagePath; // Field Baru: Path Foto Profil
+  final String? profileImagePath;
 
   UserModel({
     required this.name,
@@ -37,7 +37,7 @@ class UserModel {
       joinDate: map['joinDate'] != null
           ? DateTime.parse(map['joinDate'])
           : DateTime.now(),
-      profileImagePath: map['profileImagePath'], // Load path
+      profileImagePath: map['profileImagePath'],
     );
   }
 
